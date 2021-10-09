@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}
+    SellerSignin
+{% endblock title %}
+{% block body %}
+<style>
+    body {
+        background-image: linear-gradient(115deg,rgba(62, 55, 153, 0.76),rgba(132, 168, 247, 0.719)),
+        url(https://moula.com.au/wp-content/uploads/2019/05/WhatisSmallBusiness_1920x880.jpg);
+    }
+    #main_form {
+        background: white;
+        border-radius: 1%;
+    }
+    .form_title {
+        text-align: center;
+        color: white;
+        margin-top: 1.3em;
+        margin-bottom: 0.8em;
+    }
+    .alert {
+        display: {{visibility}};
+        width:70%;
+        text-align: center;
+        margin:20px auto -10px;
+    }
+    .container{
+      margin-bottom: 170px;
+    }
+</style>
+<div class="alert alert-danger text-dark" role="alert">
+    Your login credentials were wrong! Please try again...
+  </div>      
+<h1 class="form_title">Sign In (Seller)</h1>
+<div class="container shadow" style="padding: 2%; width: 40vw;" id="main_form">
+    <div class="form-sec">
+      <h4 style="text-align: center;">Enter your credentials below</h4>
+      <br>
+
+     <form method="POST">
+        
+        <div class="form-group">
+          <!--<label>Email:</label>-->
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope icon" style="color: black;"></i></span>
+            <input type="email" class="form-control" id="name" placeholder="Enter Email" name="email" required>
+          </div>
+        </div>
+        <br>
+
+        <div class="form-group">
+          <!--<label>Subject:</label>-->
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock icon" style="color: black;"></i></span>
+            <input type="Password" class="form-control" id="name" placeholder="Enter Password" name="Password" required>
+          </div>
+        </div>
+        <br>
+
+        <button type="submit" class="btn btn-primary container-fluid"><i class="fa fa-user"></i> Sign In</button>
+      </form>
+      </div>
+    </div>
+{% endblock body %}

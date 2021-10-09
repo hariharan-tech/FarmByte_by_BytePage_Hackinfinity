@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %}
+    Shop
+{% endblock title %}
+{% block body %}
+<style>
+
+    /* body {
+        background-image: linear-gradient(115deg,rgba(62, 55, 153, 0.76),rgba(132, 168, 247, 0.719)),
+        url(https://moula.com.au/wp-content/uploads/2019/05/WhatisSmallBusiness_1920x880.jpg);
+    } */
+
+    .fulltitle{
+        font-size: 2rem;
+        margin:10px auto;
+        text-align: center;
+        display: block;
+    }
+    li{
+        text-align: center;
+    }
+    .subtitle{
+        font-size: 1.3rem;
+        margin: 20px 10px;
+        background: linear-gradient(115deg,rgba(22, 134, 37, 0.8),rgba(45, 167, 49, 0.7));
+        color: azure;
+        border-radius: 2em;
+        padding: 0.4em;
+        text-shadow: 0 1px 2px rgba(0,0,0,.5);
+        text-align: center;
+    }
+    
+
+    .row{
+        margin: 0 10px;
+    }
+    body{
+        background-color: #0008ff1f;
+    }
+    .selfhelpg{
+        margin:10px;
+    }
+    .card{
+        margin:6px;
+        padding: 0;
+    }
+    progress::-moz-progress-bar { background-color: #198754; border-radius: 0 25px 25px 0;}
+    progress::-webkit-progress-value { background-color: #198754;border-radius: 0 25px 25px 0;}
+    progress { background-color: #198754;border-radius: 0 25px 25px 0; }
+
+    #cta {
+      text-align: center;
+      background: linear-gradient(115deg,rgba(22, 134, 37, 0.8),rgba(154, 248, 157, 0.7));
+      padding: 2% 10%;
+      color: white;
+      text-shadow: 0 2px 3px rgba(0,0,0,.5);
+    }
+
+    .calltoaction {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+    
+    
+</style>
+<section id="cta">
+    <h3 class="calltoaction">Shop Section</h3>
+</section>
+
+<div class="subtitle"><h3>Self help group (சுய உதவிக் குழு) products</h3></div>
+<!-- for loop comes here -->
+<div class="selfhelpg row">
+{% for product in allquery %}
+<div class="card shadow" style="width: 18rem;">
+    <img src="https://source.unsplash.com/1600x900/?{{product.title}}" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.desc}}</p>
+      </div>
+    <ul class="list-group list-group-flush">
+    </ul>
+        <li class="list-group-item">{{product.creatorinfo}}</li>
+        <li class="list-group-item">₹ {{product.price}}</li>
+        <li class="list-group-item"><progress id="file" value={{product.review}} max="100"></progress>  {{product.review}} %</li>
+        <li class="list-group-item"><button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button></li>
+  </div>
+{% endfor %}
+</div>
+    <br>
+    <br>
+<div class="subtitle"><h3>Farm products</h3></div>
+<div class="selfhelpg row">
+    <!-- for loop comes here -->
+    {% for product in allquery %}
+    <div class="card" style="width: 18rem;">
+        <img src="https://source.unsplash.com/1600x900/?{{product.title}}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{product.title}}</h5>
+            <p class="card-text">{{product.desc}}</p>
+          </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+            <li class="list-group-item">{{product.creatorinfo}}</li>
+            <li class="list-group-item">₹ {{product.price}}</li>
+            <li class="list-group-item"><progress id="file" value={{product.review}} max="100"></progress>  {{product.review}} %</li>
+            <li class="list-group-item"><button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button></li>
+      </div>
+{% endfor %}
+</div>
+{% endblock body %}

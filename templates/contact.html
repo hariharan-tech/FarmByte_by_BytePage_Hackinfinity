@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}
+    Contact Us
+{% endblock title %}
+{% block body %}
+    <style>
+        body {
+            background-image: linear-gradient(115deg,rgba(22, 134, 37, 0.8),rgba(182, 255, 185, 0.7)),
+            url(https://wallpapercave.com/wp/wp6737905.jpg);
+        }
+        #main_form {
+            background: white;
+            border-radius: 1%;
+        }
+        .form_title {
+            text-align: center;
+            color: white;
+            margin-top: 1.3em;
+            margin-bottom: 0.8em;
+        }
+        .alert{
+            /* display: {{visibility}}; */
+            width:70%;
+            text-align: center;
+            margin:20px auto -10px;
+
+        }
+    </style>
+    
+    <div class="alert alert-success text-dark" role="alert">
+        Thanks for your response! We'll reach out to you soon...
+      </div>      
+    <h1 class="form_title">Contact Us</h1>
+    <div class="container shadow" style="padding: 2%; width: 60vw;" id="main_form">
+        <div class="form-sec">
+          <h4 style="text-align: center;">We'd love to hear from you!</h4>
+          <br>
+         <form method="POST">
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" id="name" placeholder="Enter Email" name="email" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Phone No.:</label>
+              <input type="number" class="form-control" id="phone" placeholder="Enter Phone no." name="phone">
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Subject:</label>
+              <input type="text" class="form-control" id="name" placeholder="Subject" name="subject" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Issues/query:</label>
+              <textarea name="issues" class="form-control" id="iq" placeholder="Enter your Issues/query" required></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Submit</button>
+          </form>
+          </div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+{% endblock body %}

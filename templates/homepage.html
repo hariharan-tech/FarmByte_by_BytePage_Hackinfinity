@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% block title %}
+    Homepage
+{% endblock title %}
+{% block body %}
+<style>
+    .dim_image {
+        filter: brightness(80%);
+    }
+    .carousel-content1 {
+      position: absolute;
+      bottom: 44.3%;
+      left: 37.5%;
+      z-index: 20;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      
+    }
+
+    #slide1-title {
+      font-family: 'Kaushan Script', cursive;
+      font-size: 6rem;
+    }
+
+    #slide2-title {
+      font-family: Helvetica, sans-serif;
+      font-size: 4.3rem;
+      font-weight: 600;
+    }
+
+    .carousel-content2 {
+      position: absolute;
+      bottom: 46%;
+      left: 38.4%;
+      z-index: 20;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      font-family: Helvetica, sans-serif;
+      font-size: 4rem;
+    }
+
+  
+
+    #shop {
+      margin-top: 2em;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 2em;
+    }
+
+    .card-snip {
+      margin: 1.5em;
+
+    }
+
+    #cta {
+      text-align: center;
+      background-color: #3a802c;
+      padding: 7% 10%;
+      color: white;
+    }
+
+    .calltoaction {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+
+    #features {
+      text-align: center;
+      background-color: white;
+      position: relative;
+      z-index: 1;
+      padding: 5% 0;
+    }
+
+    .featuresc {
+      line-height: 2;
+    }
+
+    .fea-text {
+      padding: 0 10%;
+    }
+
+    .feafont {
+      margin-bottom: 1rem;
+      color: #4a923b;
+    }
+
+    .feafont:hover {
+      color: #39792c;
+    }
+
+</style>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="Intro1">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fget.wallhere.com%2Fphoto%2Fsunlight-landscape-grass-sky-field-evening-morning-farm-mount-scenery-grassland-agriculture-meadow-plantation-plain-1920x1080-px-crop-computer-wallpaper-grass-family-hill-station-paddy-field-792595.jpg&f=1&nofb=1" height = "600px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <div class="carousel-content1">
+          <h1 id="slide1-title">FarmByte</h1>
+        </div>
+        <div class="carousel-caption d-none d-md-block">
+          <h4>An Initiative by BytePage</h4>
+          <p style="font-size: 1.3rem;">An E-commerce website for local businesses, self help groups and farmers.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://mk0timesnextw7n7qiu0.kinstacdn.com/wp-content/uploads/2020/09/072477a0-28ef-42cf-98e1-bf26389a5064-Photo-from-Daksin.jpg" height = "600px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <div class="carousel-content2">
+          <h1 id="slide2-title">Our Mission</h1>
+        </div>
+        <div class="carousel-caption d-none d-md-block">
+          <h4>We support farmers and local businesses</h4>
+          <p style="font-size: 1.3rem;">We, here, at FarmByte strive to ensure that local businesses and self-help groups of our districts and towns get the reach and the clientele they deserve.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2014%2F10%2Fnature%2FBeautiful_Sunset_Nature_Landscape.jpg&f=1&nofb=1" height = "600px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>Transport facilities</h4>
+          <p style="font-size: 1.3rem;">We provide affordable transportation and ensure sellers do not have to compensate from their pocket.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section id="features" class="shadow">
+    <div class="container-fluid featuresc">
+      <div class="row">
+        <div class="col-lg-4">
+          <i class="fas fa-check-circle fa-4x feafont"></i>
+          <h3>Verified Sellers</h3>
+          <p class="fea-text">We verify our sellers thoroughly.</p>
+        </div>
+        <div class="col-lg-4">
+          <i class="fa fa-truck fa-4x feafont"></i>
+          <h3>Cheap transportation</h3>
+          <p class="fea-text">Our transportation charges are affordable.</p>
+        </div>
+        <div class="col-lg-4">
+          <i class="fas fa-heart fa-4x feafont"></i>
+          <h3>User satisfaction.</h3>
+          <p class="fea-text">We prioritize user satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="row container-fluid shadow" id="shop">
+    <h5 class="card-header">Check out some of our products</h5>
+
+    <div class="card card-snip shadow" style="width: 18rem; padding: 0;">
+      <img src="https://source.unsplash.com/1600x900/?organic" class="card-img-top" style="margin: 0;">
+      <div class="card-body card-snip">
+          <h5 class="card-title">Product Title</h5>
+          <p class="card-text">product description.</p>
+          <button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="card card-snip shadow" style="width: 18rem; padding: 0;">
+      <img src="https://source.unsplash.com/1600x900/?food" class="card-img-top">
+      <div class="card-body card-snip">
+          <h5 class="card-title">Product Title</h5>
+          <p class="card-text">product description.</p>
+          <button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button>
+      </div>
+    </div>
+    
+    <div class="card card-snip shadow" style="width: 18rem; padding: 0;">
+      <img src="https://source.unsplash.com/1600x900/?foods" class="card-img-top">
+      <div class="card-body card-snip">
+          <h5 class="card-title">Product Title</h5>
+          <p class="card-text">product description.</p>
+          <button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button>
+      </div>
+    </div>
+
+    <div class="card card-snip shadow" style="width: 18rem; padding: 0;">
+      <img src="https://source.unsplash.com/1600x900/?sweets" class="card-img-top">
+      <div class="card-body card-snip">
+          <h5 class="card-title">Product Title</h5>
+          <p class="card-text">product description.</p>
+          <button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button>
+      </div>
+    </div>
+
+  </div> 
+  
+  <!-- end section -->
+
+  <section id="cta">
+    <h3 class="calltoaction">What are you waiting for? <br>Register Now!</h3>
+    <button type="button" onclick="location.href = '/signupb';" class="btn btn-dark btn-lg">SignUp as User</button>
+    <button type="button" onclick="location.href = '/signups';" class="btn btn-light btn-lg">SignUp as Seller</button>
+  </section>
+  
+{% endblock body %}

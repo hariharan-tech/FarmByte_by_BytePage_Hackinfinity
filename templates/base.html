@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>{% block title %}
+    {% endblock title %} - FarmByte</title>
+
+    <style>
+
+        ::-webkit-scrollbar {
+          width: 0.7em;
+        }
+        ::-webkit-scrollbar-track {
+          background: rgba(0, 0, 0, 1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: rgba(252, 252, 252, 0.9);
+          border-radius: 100vw;
+        }
+
+        .nav-item {
+          margin:0 1.2rem;
+        }
+
+        #footer {
+          text-align: center;
+          background-color: white;
+          padding: 3%;
+        }
+
+        .icon {
+          color:white;
+          margin:5px 10px;
+        }
+
+        .brandfont {
+          font-family: 'Kaushan Script', cursive;
+          font-size: 1.4rem;
+        }
+
+        /*.masthead {
+          width: 100%;
+        }*/
+
+
+        .shadow-custom {
+          -webkit-box-shadow: -7px 25px 32px -20px rgba(0,0,0,0.35);
+          -moz-box-shadow: -7px 25px 32px -20px rgba(0,0,0,0.35);
+          box-shadow: -7px 25px 32px -20px rgba(0,0,0,0.35);
+        }
+        
+        .pf{
+          opacity:0.8;
+        }
+    </style>
+  
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+            <img src="https://i.ibb.co/qDd2PQr/farmer.png" width="36" height="36" alt=""><span class="brandfont"> FarmByte</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/shop">Shop</a>
+              </li>
+              </ul>
+            </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Sign In</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sign In
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/signinb">as User</a></li>
+                  <li><a class="dropdown-item" href="/signins">as Seller</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sign Up
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/signupb">as User</a></li>
+                  <li><a class="dropdown-item" href="/signups">as Seller</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contactus">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      {% block body %}
+      {% endblock body %}
+      <footer id="footer" class="bg-dark">
+        <i class="fab fa-twitter icon"></i>
+        <i class="fab fa-facebook-f icon"></i>
+        <i class="fab fa-instagram icon"></i>
+        <i class="fas fa-envelope icon"></i>
+        <p class="icon pf">© Copyright 2021 FarmByte by BytePage</p>
+      </footer>
+</body>
+</html>

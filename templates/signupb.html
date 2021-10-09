@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}
+    BuyerSignUp
+{% endblock title %}
+{% block body %}
+    <style>
+        body {
+            background-image: linear-gradient(115deg,rgba(38, 132, 155, 0.8),rgba(190, 242, 255, 0.7)),
+            url(https://www.liquidesign.co.uk/wp-content/uploads/2017/09/Crate47-photography-Kaafi-9.jpg);
+        }
+        #main_form {
+            background: white;
+            border-radius: 1%;
+        }
+        .form_title {
+            text-align: center;
+            color: white;
+            margin-top: 1.3em;
+            margin-bottom: 0.8em;
+        }
+        .alert{
+            display: {{visibility}};
+            width:70%;
+            text-align: center;
+            margin:20px auto -10px;
+
+        }
+
+        .container {
+          margin-bottom: 170px;
+        }
+    </style>
+    
+    <div class="alert alert-success text-dark" role="alert">
+        User account created! <a href="/signinb">Click here to Login</a>
+      </div>      
+    <h1 class="form_title">User Sign Up</h1>
+    <div class="container shadow" style="padding: 2%; width: 50vw;" id="main_form">
+        <div class="form-sec">
+          <h4 style="text-align: center;">Enter your details below</h4>
+         <form method="POST">
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Phone No.:</label>
+              <input type="text" class="form-control" id="phone" placeholder="Enter Phone no." name="phone" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password" required>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Address</label>
+              <textarea name="address" class="form-control" id="addr" placeholder="Enter your Address along with zip-code" required></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary container-fluid"><i class="fa fa-user"></i> Sign Up</button>
+          </form>
+          </div>
+        </div>
+{% endblock body %}

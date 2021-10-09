@@ -73,7 +73,7 @@
 <!-- for loop comes here -->
 <div class="selfhelpg row">
 {% for product in allquery %}
-<div class="card shadow" style="width: 18rem;">
+<div class="card" style="width: 18rem;">
     <img src="https://source.unsplash.com/1600x900/?{{product.title}}" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
@@ -82,9 +82,9 @@
     <ul class="list-group list-group-flush">
     </ul>
         <li class="list-group-item">{{product.creatorinfo}}</li>
-        <li class="list-group-item">₹ {{product.price}}</li>
+        <li class="list-group-item">{{product.price}}</li>
         <li class="list-group-item"><progress id="file" value={{product.review}} max="100"></progress>  {{product.review}} %</li>
-        <li class="list-group-item"><button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button></li>
+        <li class="list-group-item"><a href="/carts/{{product.itemno}}" type="button" class="btn btn-success">Show more <i class="fas fa-info-circle"></i></a></li>
   </div>
 {% endfor %}
 </div>
@@ -103,9 +103,9 @@
         <ul class="list-group list-group-flush">
         </ul>
             <li class="list-group-item">{{product.creatorinfo}}</li>
-            <li class="list-group-item">₹ {{product.price}}</li>
+            <li class="list-group-item">{{product.price}}</li>
             <li class="list-group-item"><progress id="file" value={{product.review}} max="100"></progress>  {{product.review}} %</li>
-            <li class="list-group-item"><button type="button" class="btn btn-success">Add to cart <i class="fas fa-cart-plus"></i></button></li>
+            <li class="list-group-item"><a href="/carts/{{product.itemno}}" type="button" class="btn btn-success">Show more <i class="fas fa-info-circle"></i></a></li>
       </div>
 {% endfor %}
 </div>

@@ -8,7 +8,7 @@ A webapp for self help groups (சுய உதவிக் குழு), local
 
 <h3>Deployment</h3>
 
-Heroku deployment link coming soon!
+Heroku deployment link: https://farmbyte.herokuapp.com/
 
 <br>
 <h3>Authors</h3>

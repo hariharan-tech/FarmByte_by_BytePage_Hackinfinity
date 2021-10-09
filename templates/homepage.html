@@ -17,12 +17,29 @@
       
     }
 
+    .carousel-content3 {
+      position: absolute;
+      bottom: 46%;
+      left: 40%;
+      z-index: 20;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      font-family: Helvetica, sans-serif;
+      font-size: 4rem;
+    }
+
     #slide1-title {
       font-family: 'Kaushan Script', cursive;
       font-size: 6rem;
     }
 
     #slide2-title {
+      font-family: Helvetica, sans-serif;
+      font-size: 4.3rem;
+      font-weight: 600;
+    }
+
+    #slide3-title {
       font-family: Helvetica, sans-serif;
       font-size: 4.3rem;
       font-weight: 600;
@@ -96,6 +113,7 @@
     }
     .card{
       text-align: center;
+      padding: 0;
     }
 </style>
 
@@ -107,7 +125,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" id="Intro1">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fget.wallhere.com%2Fphoto%2Fsunlight-landscape-grass-sky-field-evening-morning-farm-mount-scenery-grassland-agriculture-meadow-plantation-plain-1920x1080-px-crop-computer-wallpaper-grass-family-hill-station-paddy-field-792595.jpg&f=1&nofb=1" height = "600px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fget.wallhere.com%2Fphoto%2Fsunlight-landscape-grass-sky-field-evening-morning-farm-mount-scenery-grassland-agriculture-meadow-plantation-plain-1920x1080-px-crop-computer-wallpaper-grass-family-hill-station-paddy-field-792595.jpg&f=1&nofb=1" height = "700px" width = "800px"class="d-block w-100 dim_image" alt="...">
         <div class="carousel-content1">
           <h1 id="slide1-title">FarmByte</h1>
         </div>
@@ -117,7 +135,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://mk0timesnextw7n7qiu0.kinstacdn.com/wp-content/uploads/2020/09/072477a0-28ef-42cf-98e1-bf26389a5064-Photo-from-Daksin.jpg" height = "600px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <img src="https://mk0timesnextw7n7qiu0.kinstacdn.com/wp-content/uploads/2020/09/072477a0-28ef-42cf-98e1-bf26389a5064-Photo-from-Daksin.jpg" height = "700px" width = "800px"class="d-block w-100 dim_image" alt="...">
         <div class="carousel-content2">
           <h1 id="slide2-title">Our Mission</h1>
         </div>
@@ -127,8 +145,12 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2014%2F10%2Fnature%2FBeautiful_Sunset_Nature_Landscape.jpg&f=1&nofb=1" height = "600px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <img src="https://welpmagazine.com/wp-content/uploads/2020/09/1_DwMJNbbk8_PP9kpk8HIxGw.png" height = "700px" width = "800px"class="d-block w-100 dim_image" alt="...">
+        <div class="carousel-content3">
+          <h1 id="slide3-title">Transport</h1>
+        </div>
         <div class="carousel-caption d-none d-md-block">
+          
           <h4>Transport facilities</h4>
           <p style="font-size: 1.3rem;">We provide affordable transportation and ensure sellers do not have to compensate from their pocket.</p>
         </div>
@@ -167,9 +189,9 @@
   </section>
 
   <div class="row container-fluid shadow" id="shop">
-    <h5 class="card-header">Check out some of our products    <button type="button" class="btn btn-success">Show more <i class="fas fa-chevron-right"></i></button></h5>
+    <h5 class="card-header">Check out some of our products    <button type="button" onclick="location.href = '/shop';" class="btn btn-success" style="margin-left: 10px;">Show more <i class="fas fa-chevron-right"></i></button></h5>
 
-    <div class="card card-snip shadow" style="width: 18rem;">
+    <div class="card card-snip shadow" style="width: 18rem; margin-left: 90px;">
       <img src="https://source.unsplash.com/1600x900/?Banana Fibre Products" class="card-img-top">
       <div class="card-body">
           <h5 class="card-title">Banana Fibre Products</h5>
@@ -177,7 +199,7 @@
         </div>
       <ul class="list-group list-group-flush">
       </ul>
-          <li class="list-group-item">c from Coimbatore</li>
+          <li class="list-group-item">Krishna&Co. from Coimbatore</li>
           <li class="list-group-item">Rs 700</li>
           <li class="list-group-item"><progress id="file" value=94.47 max="100"></progress>  94.47 %</li>
           <li class="list-group-item"><a href="/carts/3" type="button" class="btn btn-success">Show more <i class="fas fa-info-circle"></i></a></li>
@@ -191,7 +213,7 @@
         </div>
       <ul class="list-group list-group-flush">
       </ul>
-          <li class="list-group-item">d from Chennai</li>
+          <li class="list-group-item">Gopal&Co. from Chennai</li>
           <li class="list-group-item">Rs 500</li>
           <li class="list-group-item"><progress id="file" value=83.67 max="100"></progress>  83.67 %</li>
           <li class="list-group-item"><a href="/carts/4" type="button" class="btn btn-success">Show more <i class="fas fa-info-circle"></i></a></li>
@@ -205,7 +227,7 @@
         </div>
       <ul class="list-group list-group-flush">
       </ul>
-          <li class="list-group-item">b from Kancheepuram</li>
+          <li class="list-group-item">Reena&Co. from Kancheepuram</li>
           <li class="list-group-item">Rs 2000</li>
           <li class="list-group-item"><progress id="file" value=98.32 max="100"></progress>  98.32 %</li>
           <li class="list-group-item"><a href="/carts/2" type="button" class="btn btn-success">Show more <i class="fas fa-info-circle"></i></a></li>
@@ -218,7 +240,7 @@
         </div>
       <ul class="list-group list-group-flush">
       </ul>
-          <li class="list-group-item">h from Coimbatore</li>
+          <li class="list-group-item">Jadhav&Co. from Coimbatore</li>
           <li class="list-group-item">Rs 1000</li>
           <li class="list-group-item"><progress id="file" value=89.95 max="100"></progress>  89.95 %</li>
           <li class="list-group-item"><a href="/carts/8" type="button" class="btn btn-success">Show more <i class="fas fa-info-circle"></i></a></li>
@@ -230,7 +252,7 @@
 
   <section id="cta">
     <h3 class="calltoaction">What are you waiting for? <br>Register Now!</h3>
-    <button type="button" onclick="location.href = '/signupb';" class="btn btn-dark btn-lg">Sign up as User</button>
+    <button type="button" onclick="location.href = '/signupb';" class="btn btn-dark btn-lg" style="margin-right: 10px;">Sign up as User</button>
     <button type="button" onclick="location.href = '/signups';" class="btn btn-outline-light btn-lg">Sign up as Seller</button>
   </section>
   

@@ -26,7 +26,7 @@
         z-index: 20;
     }   
 </style>
-<button type="button" class="btn btn-dark btn-lg bttn shadow"><i class="fa fa-shopping-cart" style="margin-right: 6px;"></i> <h5 id="cart_count">0</h5></button>
+<button type="button" class="btn btn-dark btn-lg bttn shadow"><i class="fa fa-shopping-cart" style="margin-right: 6px;"></i> <h5 id="cart_count">{{c}}</h5></button>
     <div class="container-fluid contai">
         <div class="row">
             <div class="col">
@@ -62,8 +62,8 @@
                     <tr>
                         <td>
                             <br>
-                            <button class="btn btn-success" style="margin-right: 8px;"><i class="fas fa-shopping-cart" ></i> Add to cart</button>
-                            <button class="btn btn-outline-success"><i class="fas fa-phone"></i> Contact Seller</button>
+                            <a href="/carts/addc/{{query.itemno}}"><button class="btn btn-success" style="margin-right: 8px;"><i class="fas fa-shopping-cart" ></i> Add to cart</button></a>
+                            <button class="btn btn-outline-success">Contact Seller <i class="fas fa-phone"></i></button>
                         </td>
                     </tr>
                 </table>

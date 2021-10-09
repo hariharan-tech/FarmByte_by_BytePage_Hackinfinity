@@ -165,7 +165,7 @@ def contactus():
 @app.route("/carts/<int:itemno>")
 def cartsection(itemno):
     query= Products.query.get(itemno)
-    return render_template("carts.html",query=query,itemno=itemno)
+    return render_template("carts.html",query=query)
 
 if __name__ == "__main__":
     app.run(debug=True)

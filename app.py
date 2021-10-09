@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 import random , csv  ,sqlite3
 
 app = Flask(__name__)
-#file = open("products_shg.csv","r")
-#reader = csv.DictReader(file,delimiter=",")
+# file = open("products_shg.csv","r")
+# reader = csv.DictReader(file,delimiter=",")
 #d={}
 #print(d)
 
@@ -39,7 +39,7 @@ db=SQLAlchemy(app)
 #     #items = Products(itemno=itemnog,title="Coir bags",desc="Coir bags straight from coconut trees",price="100",creatorinfo="ABC from chennai",review=round(random.uniform(66.67, 98.99), 2))
 #         db.session.add(items)
 #         db.session.commit()
-#     #itemnog+=1
+# #     #itemnog+=1
 
 class Products(db.Model):
     itemno = db.Column(db.Integer, primary_key=True)
@@ -162,9 +162,10 @@ def contactus():
     else:
         return render_template("contact.html",visibility="none")
 
-@app.route("/carts",methods=["POST","GET"])
-def cartsection():
-    return render_template("carts.html")
+@app.route("/carts/<int:itemno>")
+def cartsection(itemno):
+    query= Products.query.get(itemno)
+    return render_template("carts.html",query=query,itemno=itemno)
 
 if __name__ == "__main__":
     app.run(debug=True)

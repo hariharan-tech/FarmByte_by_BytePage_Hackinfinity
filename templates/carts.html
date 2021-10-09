@@ -1,4 +1,60 @@
 {% extends 'base.html' %}
 {% block body %}
-    <h1>{{query.itemno}}</h1>
+<style>
+    .proimg{
+        height:50vh;
+    }
+    .contai{
+        padding:100px;
+    }
+    tr{
+        text-align: center;
+    }
+    body{
+        background-color: #71b3dd45;
+    }
+</style>
+    <div class="container-fluid contai">
+        <div class="row">
+            <div class="col">
+                <img src="https://source.unsplash.com/1600x900/?{{query.title}}" class="proimg">
+            </div>
+            <div class="col">
+                <table>
+                    <tr>
+                        <td>
+                            <h1>{{query.title}}</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="descp">{{query.desc}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Price: {{query.price}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Seller info: {{query.creatorinfo}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>{{query.review}} % people liked this product</p><progress id="file" value={{query.review}} max="100"></progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                            <button class="btn btn-success">Add to cart</button>
+                            <button class="btn btn-outline-success">Contact Seller</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock body %}

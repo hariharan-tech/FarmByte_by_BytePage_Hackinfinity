@@ -3,5 +3,33 @@
     Profile
 {% endblock title %}
 {% block body %}
-<h1>Hello, {{user}}!</h1>
+<style>
+    #cta {
+      text-align: center;
+      background-color: #3a802c;
+      padding: 9% 10%;
+      color: white;
+    }
+
+    .calltoaction {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+
+    .abc {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300  ;
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+
+</style>
+<section id="cta">
+    <h3 class="calltoaction">Hello, {{user}}!</h3>
+    <h4 class="abc">You are one step closer to be a part of us.<br> Press the button below to explore our wide varity of products!</h4>
+    <br><br>
+    <button type="button" onclick="location.href = '/shop';" class="btn btn-dark btn-lg"><i class="fa fa-shopping-bag" style="margin-right: 6px;"></i> Shop Now</button>
+</section>
 {% endblock body %}

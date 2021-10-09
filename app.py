@@ -1,6 +1,6 @@
 from flask import Flask , render_template , request
 from flask_sqlalchemy import SQLAlchemy
-import random , csv  ,sqlite3
+import sqlite3
 
 app = Flask(__name__)
 # file = open("products_shg.csv","r")
@@ -117,7 +117,7 @@ def signups():
 def shop():
     #generate_shoproducts()
     allquery= Products.query.all()
-    return render_template("shop.html",allquery=allquery) #,allquery=allquery
+    return render_template("shop.html",allquery=allquery,c=c) #,allquery=allquery
 
 @app.route("/signinb",methods=['POST','GET'])
 def signinb():
@@ -162,10 +162,19 @@ def contactus():
     else:
         return render_template("contact.html",visibility="none")
 
+c=0
+
 @app.route("/carts/<int:itemno>")
 def cartsection(itemno):
     query= Products.query.get(itemno)
-    return render_template("carts.html",query=query)
+    return render_template("carts.html",query=query,c=c)
+
+@app.route("/carts/addc/<int:itemno>")
+def addcart(itemno):
+    global c
+    c=c+1
+    query= Products.query.get(itemno)
+    return render_template("carts.html",query=query,c=c)
 
 if __name__ == "__main__":
     app.run(debug=True)

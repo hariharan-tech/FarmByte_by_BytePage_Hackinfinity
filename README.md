@@ -2,16 +2,11 @@
 
 A webapp for self help groups (சுய உதவிக் குழு), local businesses, and farmers.
 
+## Deployment
 
-<br>
+Heroku deployment link: (Heroku Link Taken Down)
 
-
-<h3>Deployment</h3>
-
-Heroku deployment link: https://farmbyte.herokuapp.com/
-
-<br>
-<h3>Authors</h3>
+## Authors
 
 - [@Hariharan A](https://www.github.com/hariharan-tech)
 - [@Gokulram A](https://www.github.com/GokulramGHV)
